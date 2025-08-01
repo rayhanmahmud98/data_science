@@ -1,0 +1,1 @@
+1. to start notebook = python -m notebook

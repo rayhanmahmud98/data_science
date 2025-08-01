@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tab Counter</title>
+  <style>
+    body {
+      width: 200px;
+      padding: 16px;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      text-align: center;
+      background: #f8f9fa;
+    }
+    .counter-display {
+      font-size: 42px;
+      font-weight: 800;
+      margin: 12px 0;
+      color: #1a73e8;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .controls {
+      display: grid;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    button {
+      background: #1a73e8;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    button:hover {
+      background: #0d5bcd;
+      transform: translateY(-1px);
+    }
+    button:active {
+      transform: translateY(0);
+    }
+    .footer {
+      font-size: 11px;
+      color: #70757a;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h3 style="margin:0">Active Tabs</h3>
+  <div class="counter-display" id="tabCount">0</div>
+  
+  <div class="controls">
+    <button id="refreshBtn">↻ Refresh Count</button>
+    <button id="resetBtn">⌫ Reset Counter</button>
+  </div>
+  
+  <div class="footer">
+    Updates automatically on tab changes
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
